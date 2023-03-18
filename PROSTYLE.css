@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Montserrat:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&family=Fraunces:opsz@9..144&family=Montserrat&display=swap');
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --Font-size:(paragraph): 14px;
+ 
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+}
+
+body{
+   background: var(--Cream);
+    font-size: 14px;
+}
+
+ main{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+ }   
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 620px;
+    height: 480px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 15px 15px 15px 15px;
+}
+
+.produc-looks{
+    grid-column: 1;
+    grid-row: 1;
+}
+.product{
+    height: 480px;
+    width: 310px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.product-mobile{
+    display: none;
+}
+
+.over-view{
+    text-align: 10px;
+    grid-column: 2;
+    padding: 30px;
+}
+
+h1{
+    font-size: 15px;
+    color:  hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: sans-serif;
+
+}
+
+h2{
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: Fraunces;
+    width: 260px;
+}
+.product-description{
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: hsl(228, 12%, 48%);
+    font-weight: 700;
+    line-height: 20px; 
+    font-family: sans-serif;
+    width: 220px;
+}
+
+.price{
+    display: flex;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+.amount{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+    font-family: Fraunces;
+}
+
+.original-amt{
+   color:  hsl(228, 12%, 48%); 
+   text-decoration: line-through; 
+   align-self: center;
+   font-weight: 700;
+  
+}
+
+#cart-button{
+    margin-top: 20px;
+    background: hsl(158, 36%, 37%);
+    height: 60px;
+    width: 240px;
+    border-radius: 15px;
+    border-style: none;
+    margin-top: 35px;
+}
+
+#cart-button:hover{
+    cursor: pointer;
+}
+
+.addcart{
+    margin-left: 8px;
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.attribution{
+    display: grid;
+    font-size: 11px; 
+    text-align: center;
+    position: relative;
+    top: 90%;
+   
+}
+
+.coder{
+    margin:  0 auto;
+}
+
+@media (max-width: 600px){
+    html{
+        padding: 40px;
+    }
+
+    .main-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 240px 427px;
+        height: 667px;
+        width: 345px;
+     } 
+    
+     .product-looks{
+        grid-column: 1;
+        grid-row: 1;
+        width: 345px;
+        height: 240px;
+     }
+
+     .product{
+        display:none;
+     }
+    
+     .product-mobile{
+        display: inline;
+        width: 345px;
+        height: 240px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      
+     }
+
+     h1{
+        margin-top: 0;
+     }
+
+     h2{
+        width: 300px;
+        
+     }
+
+     .product-description{
+        width: 255px;
+        margin-top: 25px;
+        width: 300px;        
+      }
+
+     .over-view{
+        grid-column: 1;
+        grid-row: 2;
+        padding: 20px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        width: 340px;
+        height: 427px;
+        
+    }
+
+    .price{
+        margin-top: 50px;
+    }
+    .amount{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #cart-button{
+        width: 305px;
+        height: 54px;
+        margin-top: 20px;
+    }
+
+    .attribution{
+        top: 80%;
+    }
+    
+}
+
+    
